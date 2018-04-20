@@ -25,7 +25,7 @@ module Ruboty
         end
 
         def phone_call(text)
-          twilio_client.account.calls.create({
+          twilio_client.api.account.calls.create({
             :to => to,
             :from => from,
             :url => twiml_url(text),
